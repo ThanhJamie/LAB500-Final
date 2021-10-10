@@ -24,7 +24,6 @@ public class main {
         int isContinue;
         Injection newInjection;
         do {
-            injectionManager.writeFile(file);
             System.out.println("AUTO UPDATE NEWEST INFORMATION");
             System.out.println("-------------------------------------------------------------");
             menu.printMenu();
@@ -63,7 +62,7 @@ public class main {
                         if (newInjection != null) {
                             break;
                         } else {
-                            System.err.println("injection ID dose not existed");
+                            System.err.println("Injection ID dose not existed");
                         }
                     } while (true);
 
@@ -107,7 +106,7 @@ public class main {
                         if (newInjection != null) {
                             break;
                         } else {
-                            System.err.println("injection ID dose not existed");
+                            System.err.println("Injection ID dose not existed");
                         }
                     } while (true);
                     //get user confirmation
