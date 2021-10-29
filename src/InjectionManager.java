@@ -238,6 +238,21 @@ public class InjectionManager {
         return null;
     }
 
+    public ArrayList<Injection> findInjectionByStudentName(StudentManager studentManager, String name) {
+        ArrayList<Injection> nameIncluded = new ArrayList<Injection>();
+        name = name.trim();
+        for (Injection injection : nameIncluded) {
+            Student newStudent = studentManager.searchStudentByID(injection.studentID);
+            if (newStudent == null) {
+                continue;
+            }
+            if (newStudent.name.toUpperCase().contains(name)) {
+                nameIncluded.add(injection);
+            }
+        }
+        return nameIncluded;
+    }
+
     public void updateInjection(String ID) {
     }
 

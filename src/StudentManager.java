@@ -50,4 +50,22 @@ public class StudentManager {
         }
         return null;
     }
+    
+     public boolean isNameDuplicate(String findName) {
+        for (Student student : studentList) {
+            if (student.name.equals(findName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public Student searchStudentByName(String findname){
+        for (Student student : studentList) {
+            if (student.name.equals(findname)) {
+                return student;
+            }
+        }
+        return null;
+    }
 }
